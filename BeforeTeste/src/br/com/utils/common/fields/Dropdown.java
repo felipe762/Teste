@@ -15,12 +15,15 @@ public class Dropdown extends Field {
 	private String classDropdown = "ui-autocomplete";
 	private WebDriverWait wait;
 
-	public void escolher(String busca, String escolha) {
-		this.comValor(escolha);
+	public void buscar(String busca) {
 		this.preencherInputParaBuscaDasOpcoes(busca);
-		this.escolherOpcaoDesejadaAposCarregarOpcoes();
+
 	}
 
+	public void escolher( String escolha) {
+		this.comValor(escolha);
+		this.escolherOpcaoDesejadaAposCarregarOpcoes();
+	}
 	private void preencherInputParaBuscaDasOpcoes(String busca) {
 		this.criarEsperaNoDriver();
 
