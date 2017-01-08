@@ -30,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/src/br/com/testes/pap/VendasPageSunTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="142">
-              <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+              <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -969,7 +969,7 @@
       <workItem from="1483701090625" duration="13222000" />
       <workItem from="1483720921129" duration="1433000" />
       <workItem from="1483817949746" duration="2487000" />
-      <workItem from="1483821361361" duration="6105000" />
+      <workItem from="1483821361361" duration="6709000" />
     </task>
     <task id="LOCAL-00001" summary="TESTE">
       <created>1483448133913</created>
@@ -1014,7 +1014,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72368000" />
+    <option name="totallyTimeSpent" value="72972000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1377,7 +1377,7 @@
     <entry file="file://$PROJECT_DIR$/src/br/com/testes/pap/VendasPageSunTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
-          <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

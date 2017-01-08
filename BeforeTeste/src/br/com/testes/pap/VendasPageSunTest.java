@@ -20,7 +20,7 @@ public class VendasPageSunTest extends Page {
 
     private LoginSun login;
     private VendasPageSun vendas;
-//hhudkfdkl
+//ok
     @Test
     public void vender() {
         for (int i = 0; i < 1; i++) {
