@@ -1,33 +1,33 @@
-package br.com.testes.pap;
+package br.com.testes.varejo;
 //Mensagem de campo obrigatório
-//Assert.assertTrue(vendas.getVendedor().verificaTextoNosAtributosDoCampo("Informe o Vendedor;"));
-//vendas.salvar();
+//Assert.assertTrue(vendasPap.getVendedor().verificaTextoNosAtributosDoCampo("Informe o Vendedor;"));
+//vendasPap.salvar();
 //Mensagem de Erro
-//Assert.assertTrue(vendas.verificaBoxErroTemMensagem("É necessário lançar pelo menos um serviço"));
+//Assert.assertTrue(vendasPap.verificaBoxErroTemMensagem("É necessário lançar pelo menos um serviço"));
 
-import br.com.apps.sun.pappaginas.LoginSun;
-import br.com.apps.sun.pappaginas.VendasPageSun;
+import br.com.apps.sun.varejo.LoginVarejo;
+import br.com.apps.sun.varejo.VendasVarejo;
 import br.com.utils.Alt.GeraCPF;
-import org.junit.Before;
-import org.junit.Test;
 import br.com.utils.common.Page;
-public class VendasPageSunTest extends Page {
+import org.junit.Test;
+
+public class VendasVarejoTest extends Page {
 
     @Override
     public void initializeFields() {
 
     }
 
-    private LoginSun login;
-    private VendasPageSun vendas;
+    private LoginVarejo login;
+    private br.com.apps.sun.varejo.VendasVarejo vendas;
 //ok
     @Test
     public void vender() {
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 5; i++) {
 
-            login = new LoginSun();
+            login = new LoginVarejo();
             login.logar();
-            vendas = new VendasPageSun();
+            vendas = new br.com.apps.sun.varejo.VendasVarejo();
 
             getFinder().buscaPeloId("menu_7").click();
             getFinder().buscaPeloId("submenu_7_6").click();
@@ -36,33 +36,32 @@ public class VendasPageSunTest extends Page {
             getFinder().buscaPeloId("inserir-registroMenuModulo22").click();
 
             vendas.getEstado().selecionaPeloTexto("MG");
-            vendas.getPdv().buscar("PAP20-00001");
+            vendas.getPdv().buscar("VJ043-00034");
             getFinder().buscaPeloId("ui-id-6").click();
-
             getFinder().buscaPeloId("ufVenda").click();
             getFinder().buscaPeloId("ufVenda").click();
-            /*vendas.salvar();
-            Assert.assertTrue(vendas.getVendedor().verificaTextoNosAtributosDoCampo("Informe o Vendedor;"));
+            /*vendasPap.salvar();
+            Assert.assertTrue(vendasPap.getVendedor().verificaTextoNosAtributosDoCampo("Informe o Vendedor;"));
             */
             vendas.getVendedor().buscar("    ");
             getFinder().buscaPeloId("ui-id-9").click();
-            /*vendas.salvar();
-            Assert.assertTrue(vendas.verificaBoxErroTemMensagem("É necessário lançar pelo menos um serviço"));
+            /*vendasPap.salvar();
+            Assert.assertTrue(vendasPap.verificaBoxErroTemMensagem("É necessário lançar pelo menos um serviço"));
             */
             vendas.getObservação().digita("-Teste:@#$%&1ª2º3êó;;");
-            //vendas.salvar();
-            /*Assert.assertTrue(vendas.verificaBoxErroTemMensagem("É necessário lançar pelo menos um serviço"));
+            //vendasPap.salvar();
+            /*Assert.assertTrue(vendasPap.verificaBoxErroTemMensagem("É necessário lançar pelo menos um serviço"));
             */
             getFinder().buscaPeloId("tipo_plano_clone1").click();
-            //vendas.salvar();
+            vendas.salvar();//não apagar
             getFinder().buscaPeloNomeDaClasse("botaoInsere").click();
-            //vendas.salvar();
+            //vendasPap.salvar();
 
             //pl_id1
             vendas.getPlano().selecionaPeloTexto("CONTROLE FATURA 1,5GB - R$49.99");
             vendas.getObservação().digita("-Teste:@#$%&1ª2º3êó;;");
             vendas.salvar();
-            // Assert.assertTrue(vendas.getPlano().verificaTextoNosAtributosDoCampo("Campo obrigatório para vendas com serviço de alta;"));
+            // Assert.assertTrue(vendasPap.getPlano().verificaTextoNosAtributosDoCampo("Campo obrigatório para vendasPap com serviço de alta;"));
             vendas.getIccid().digita("89558278372873279382");
             //vese_fatura_vencimento1
             getFinder().buscaPeloId("vese_fatura_vencimento11").click();
@@ -76,41 +75,41 @@ public class VendasPageSunTest extends Page {
             GeraCPF g = new GeraCPF();
             vendas.getCpf().digita(g.geraCPFFinal());
 
-        /*vendas.salvar();
-        Assert.assertTrue(vendas.getCpf().verificaTextoNosAtributosDoCampo("Informe o CPF;"));*/
+        /*vendasPap.salvar();
+        Assert.assertTrue(vendasPap.getCpf().verificaTextoNosAtributosDoCampo("Informe o CPF;"));*/
             vendas.getNome().digita("Jose");
-       /* vendas.salvar();
-        Assert.assertTrue(vendas.getNome().verificaTextoNosAtributosDoCampo("Informe o nome;"));*/
+       /* vendasPap.salvar();
+        Assert.assertTrue(vendasPap.getNome().verificaTextoNosAtributosDoCampo("Informe o nome;"));*/
             vendas.getNomeMae().digita("Lia");
-        /*vendas.salvar();
-        Assert.assertTrue(vendas.getNomeMae().verificaTextoNosAtributosDoCampo("Informe o Nome da Mãe;"));*/
+        /*vendasPap.salvar();
+        Assert.assertTrue(vendasPap.getNomeMae().verificaTextoNosAtributosDoCampo("Informe o Nome da Mãe;"));*/
             vendas.getDataNascimento().digita("28091993");
-       /* vendas.salvar();
-        Assert.assertTrue(vendas.getDataNascimento().verificaTextoNosAtributosDoCampo("Informe a Data de Nascimento;"));*/
+       /* vendasPap.salvar();
+        Assert.assertTrue(vendasPap.getDataNascimento().verificaTextoNosAtributosDoCampo("Informe a Data de Nascimento;"));*/
             getFinder().buscaPeloId("pess_sexo1").click();
             vendas.getCep().digita("13500313");
             //getFinder().buscaPeloId("pess_rua").click();
             vendas.getNumero().digita("665");
-        /*vendas.salvar();
-        Assert.assertTrue(vendas.getCep().verificaTextoNosAtributosDoCampo("Informe o CEP;"));*//**//*
-        vendas.salvar();*/
+        /*vendasPap.salvar();
+        Assert.assertTrue(vendasPap.getCep().verificaTextoNosAtributosDoCampo("Informe o CEP;"));*//**//*
+        vendasPap.salvar();*/
         vendas.getUf().digita("MT");
-        //vendas.salvar();
+        //vendasPap.salvar();
         vendas.getCidade().digita("");
         vendas.getEndereco().digita("");
 
         vendas.getBairro().digita("Aero Rancho");
         vendas.getComplemento().digita("Mercado");
-        /*Assert.assertTrue(vendas.getCep().verificaTextoNosAtributosDoCampo("Informe o Telefone;"));
-        vendas.salvar();*/
+        /*Assert.assertTrue(vendasPap.getCep().verificaTextoNosAtributosDoCampo("Informe o Telefone;"));
+        vendasPap.salvar();*/
             vendas.getEmail().digita("felipdfe@gmail.com");
             vendas.getTelefone1().digita("67992119043");
-            //Assert.assertTrue(vendas.getEmail().verificaTextoNosAtributosDoCampo("Campo obrigatório para vendas com fatura por email;"));
+            //Assert.assertTrue(vendasPap.getEmail().verificaTextoNosAtributosDoCampo("Campo obrigatório para vendasPap com fatura por email;"));
             vendas.getTelefone2().digita("67992140043");
             vendas.salvar();
             getFinder().buscaPeloId("btnSalvar").click();
 
-           // login.fecharNavegador();
+            login.fecharNavegador();
         }
     }
 }

@@ -1,9 +1,9 @@
-package br.com.apps.sun.pappaginas;
+package br.com.apps.sun.pap;
 
 import br.com.utils.common.Page;
 import org.openqa.selenium.WebElement;
 
-public class LoginSun extends Page {
+public class LoginPap extends Page {
 	private WebElement selecione;
 	private WebElement login;
 	private WebElement password;
@@ -21,6 +21,4 @@ public class LoginSun extends Page {
 		password.sendKeys(getPropSun().getProperty("USUARIO_SENHA"));
 		password.submit();
 	}
-
-
 }

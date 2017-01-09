@@ -1,4 +1,4 @@
-package br.com.apps.sun.pappaginas;
+package br.com.apps.sun.pap;
 
 import br.com.utils.common.Page;
 import br.com.utils.common.fields.Dropdown;
@@ -7,7 +7,7 @@ import br.com.utils.common.fields.SelectBox;
 import br.com.utils.common.fields.Text;
 import javafx.scene.control.RadioButton;
 
-public class VendasPageSun extends Page {
+public class VendasPap extends Page {
 
 	private SelectBox estado;
 	private Dropdown pdv;

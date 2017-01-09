@@ -1,6 +1,6 @@
-package br.com.testes.pap;
+package br.com.testes.varejo;
 
-import br.com.apps.sun.pappaginas.LoginSun;
+import br.com.apps.sun.varejo.LoginVarejo;
 import org.junit.After;
 import org.junit.Test;
 
@@ -9,16 +9,16 @@ import javax.swing.*;
 import static javax.swing.JOptionPane.ERROR_MESSAGE;
 
 
-public class LoginSunTest {
+public class LoginVarejoTest {
 
-    private LoginSun login;
+    private LoginVarejo login;
    // private ClientesPage clientes;
 
     @Test
     public void init() {
-      //  class LoginSunTest clientes;
+      //  class LoginVarejoTest clientes;
         try {
-            login = new LoginSun();
+            login = new LoginVarejo();
             login.logar();
         } catch (Exception e) {
             e.printStackTrace();
