@@ -24,8 +24,8 @@ public class Finder {
 		this.temDriver();
 		by = By.name(name);
 		return buscaElementoQuandoDisponivel();
-		
 	}
+
 	
 	public WebElement buscaPeloNomeDaClasse(String className) {
 		this.temDriver();
@@ -65,7 +65,7 @@ public class Finder {
 			e.printStackTrace();
 		}
 	}
-	
-	
-	
+
+
+
 }

@@ -7,9 +7,9 @@ package br.com.testes.distribuicao;
 
 import br.com.apps.sun.distribuicao.LoginDistribuicao;
 import br.com.apps.sun.distribuicao.VendasDistribuicao;
-import br.com.apps.sun.revenda.LoginRevenda;
 import br.com.utils.Alt.GeraCPF;
 import br.com.utils.common.Page;
+import org.junit.Assert;
 import org.junit.Test;
 
 public class VendasDistribucaoTest extends Page {
@@ -21,9 +21,9 @@ public class VendasDistribucaoTest extends Page {
 
     private LoginDistribuicao login;
     private VendasDistribuicao vendas;
-//ok
+
     @Test
-    public void vender() {
+    public void vender() throws InterruptedException {
         for (int i = 0; i < 5; i++) {
 
             login = new LoginDistribuicao();
@@ -41,33 +41,29 @@ public class VendasDistribucaoTest extends Page {
             getFinder().buscaPeloId("ui-id-6").click();
             getFinder().buscaPeloId("ufVenda").click();
             getFinder().buscaPeloId("ufVenda").click();
-            /*vendasPap.salvar();
-            Assert.assertTrue(vendasPap.getVendedor().verificaTextoNosAtributosDoCampo("Informe o Vendedor;"));
-            */
+
             vendas.getVendedor().buscar("    ");
             getFinder().buscaPeloId("ui-id-9").click();
-            vendas.salvar();//não apagar
-            getFinder().buscaPeloNomeDaClasse("botaoPadrao").click();
+            //vendas.salvar();//não apagar
+            getFinder().buscaPeloId("botoesPDR").click();
             //vendasPap.salvar();
             vendas.getPlano().selecionaPeloTexto("CONTROLE FATURA 1,5GB - R$49.99");
-            vendas.getObservação().digita("-Teste:@#$%&1ª2º3êó;;");
-            vendas.salvar();
-            // Assert.assertTrue(vendasPap.getPlano().verificaTextoNosAtributosDoCampo("Campo obrigatório para vendasPap com serviço de alta;"));
             vendas.getIccid().digita("89558278372873279382");
-            //vese_fatura_vencimento1
             getFinder().buscaPeloId("vese_fatura_vencimento11").click();
 
             //Mudar de aba
-            vendas.getObservação().digita("-Teste:@#$%&1ª2º3êó;;");
             vendas.salvar();//não deletar
-            getFinder().buscaPeloId("liDadosServico").click();
+            getFinder().buscaPeloId("id-usuario-cpf").click();
 
             //Dados do cliente
+            //getFinder().buscaPeloNomeDaClasse("fa-chevron-circle-right").click();
             GeraCPF g = new GeraCPF();
-            vendas.getCpf().digita(g.geraCPFFinal());
 
-        /*vendasPap.salvar();
-        Assert.assertTrue(vendasPap.getCpf().verificaTextoNosAtributosDoCampo("Informe o CPF;"));*/
+            //sleep(5000);
+
+            vendas.getCpf().digita(g.geraCPFFinal());
+            /*//vendas.salvar();
+            Assert.assertTrue(vendas.getCpf().verificaTextoNosAtributosDoCampo("Informe o CPF;"));*/
             vendas.getNome().digita("Jose");
        /* vendasPap.salvar();
         Assert.assertTrue(vendasPap.getNome().verificaTextoNosAtributosDoCampo("Informe o nome;"));*/
@@ -99,7 +95,6 @@ public class VendasDistribucaoTest extends Page {
             vendas.getTelefone2().digita("67992140043");
             vendas.salvar();
             getFinder().buscaPeloId("btnSalvar").click();
-
             login.fecharNavegador();
         }
     }

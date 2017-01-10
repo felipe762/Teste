@@ -38,6 +38,7 @@ public class VendasVarejoTest extends Page {
             vendas.getEstado().selecionaPeloTexto("MG");
             vendas.getPdv().buscar("VJ043-00034");
             getFinder().buscaPeloId("ui-id-6").click();
+
             getFinder().buscaPeloId("ufVenda").click();
             getFinder().buscaPeloId("ufVenda").click();
             /*vendasPap.salvar();
@@ -53,7 +54,7 @@ public class VendasVarejoTest extends Page {
             /*Assert.assertTrue(vendasPap.verificaBoxErroTemMensagem("É necessário lançar pelo menos um serviço"));
             */
             getFinder().buscaPeloId("tipo_plano_clone1").click();
-            vendas.salvar();//não apagar
+            vendas.salvar();
             getFinder().buscaPeloNomeDaClasse("botaoInsere").click();
             //vendasPap.salvar();
 

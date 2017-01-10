@@ -1,5 +1,6 @@
 package br.com.utils.common;
 
+import br.com.utils.Alt.GeraCPF;
 import br.com.utils.common.fields.SelectBox;
 import br.com.utils.common.buttons.Button;
 import br.com.utils.common.buttons.RemoverButton;
@@ -150,6 +151,7 @@ public abstract class Page {
 	
 	public void sleep(long milissegundos) {
 		try {
+		    System.out.println("Parei por "+milissegundos+"ms");
 			Thread.sleep(milissegundos);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
