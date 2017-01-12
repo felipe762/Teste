@@ -11,6 +11,7 @@ import br.com.utils.Alt.GeraCPF;
 import br.com.utils.common.Page;
 import org.junit.Assert;
 import org.junit.Test;
+import org.openqa.selenium.By;
 
 public class VendasDistribucaoTest extends Page {
 
@@ -37,14 +38,15 @@ public class VendasDistribucaoTest extends Page {
             getFinder().buscaPeloId("inserir-registroMenuModulo22").click();
 
             vendas.getEstado().selecionaPeloTexto("MG");
-            vendas.getPdv().buscar("MERCEARIA MARGARIDA");
             getFinder().buscaPeloId("ui-id-6").click();
             getFinder().buscaPeloId("ufVenda").click();
             getFinder().buscaPeloId("ufVenda").click();
 
             vendas.getVendedor().buscar("    ");
-            getFinder().buscaPeloId("ui-id-9").click();
+            getFinder().buscaPeloId("ui-id-10").click();
             //vendas.salvar();//não apagar
+            //*[@id="botoesPDR"]/input[1]
+            driver.findElement(By.xpath("//*[@id=\"botoesPDR\"]/input[1]")).click();
             getFinder().buscaPeloId("botoesPDR").click();
             //vendasPap.salvar();
             vendas.getPlano().selecionaPeloTexto("CONTROLE FATURA 1,5GB - R$49.99");

@@ -98,6 +98,8 @@ public abstract class Page {
 	}
 	
 	public Page salvar() {
+		//WebDriverWait wait = new WebDriverWait(driver, 10);
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("botaoOk")));
 		salvar.clicar();
 		return this;
 	}
@@ -148,7 +150,6 @@ public abstract class Page {
 		}
 		return false;
 	}
-	
 	public void sleep(long milissegundos) {
 		try {
 		    System.out.println("Parei por "+milissegundos+"ms");
@@ -157,6 +158,5 @@ public abstract class Page {
 			e.printStackTrace();
 		}
 	}
+	}
 
-	
-}

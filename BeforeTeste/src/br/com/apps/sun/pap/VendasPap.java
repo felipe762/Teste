@@ -114,97 +114,91 @@ public class VendasPap extends Page {
         telefone2.set("pess_tel2");
         }
 
-	public void abrirInserirVendas() {
-		getFinder().buscaPeloId("menu_7").click();
-		getFinder().buscaPeloId("submenu_7_6").click();
-		getFinder().buscaPeloNomeDaClasse("GrupoMenuModulo22").click();
-		sleep(500);
-		getFinder().buscaPeloNomeDaClasse("inserir-registroMenuModulo22").click();
-	}//
+
 
 	public SelectBox getEstado() {return estado;}
 	public Dropdown getPdv() {
-		sleep(800);
+		sleep(1000);
 		return pdv;}
 	public Dropdown getVendedor() {
-		sleep(800);
+		sleep(1000);
 		return vendedor;
 	}
 	public Text getObservação(){
-		sleep(800);return observação; }
+		sleep(1000);return observação; }
 	public SelectBox getDdd(){
-		sleep(800);return ddd;}
+		sleep(1000);return ddd;}
 //    public RadioBox getServico(){
-//		sleep(800);return servico;    }
+//		CadastroUsuarioPapTest(1000);return servico;    }
     public SelectBox getPlano(){
-		sleep(800);
+		sleep(1000);
         return plano;
     }
     public Text getIccid(){
-		sleep(800);
+		sleep(1000);
     	return iccid;
     }
     public RadioBox getVencimentoFatura(){
 
-		sleep(800);return vencimentoFatura;
+		sleep(1000);return vencimentoFatura;
     }
     public Text getCpf(){
 
-		sleep(800);return cpf;
+		sleep(1000);return cpf;
     }
     public Text getNome(){
 
-		sleep(800);return nome;
+		sleep(1000);return nome;
     }
     public Text getNomeMae(){
-		sleep(800);
+		sleep(1000);
         return nomeMae;
     }
     public Text getDataNascimento(){
 
-		sleep(800);
+		sleep(1000);
 		return dataNascimento;
     }
     public RadioBox getSexo(){
-		sleep(800);
+		sleep(1000);
     	return sexo;}
     public Text getCep(){
-		sleep(800);
+		sleep(1000);
     	return cep;
     }
     public SelectBox getUf(){
-		sleep(800);
+		sleep(1000);
     	return uf;}
     public SelectBox getCidade(){
-		sleep(800);
+		sleep(1000);
     	return cidade;
     }
     public Text getEndereco(){
-		sleep(800);
+		sleep(1000);
     	return endereco;
     }
     public Text getNumero(){
-		sleep(800);
+		sleep(1000);
         return numero;
     }
     public Text getBairro(){
-		sleep(800);
+		sleep(1000);
     	return bairro;
     }
     public Text getComplemento(){
-		sleep(800);
+		sleep(1000);
 		return complemento;
     }
     public Text getEmail(){
-		sleep(800);
+		sleep(1000);
     	return email;
     }
     public Text getTelefone1(){
-		sleep(800);
+		sleep(1000);
         return telefone1;
     }
     public Text getTelefone2(){
-		sleep(800);
+		sleep(1000);
     	return telefone2;
     }
 }
