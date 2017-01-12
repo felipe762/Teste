@@ -8,17 +8,13 @@ import br.com.utils.common.fields.Text;
 
 public class CadastroUsuario extends Page {
 
-	/*private Text observação;
-	private SelectBox ddd;
-	private RadioBox servico;*/
-
-
 	private SelectBox funcao;
 	private Text nome;
 	private Text re;
 	private Text cpf;
 	private Text celular;
 	private Text email;
+	private Text dataNascimento;
 	private RadioBox acessoNacional;
 	private RadioBox acessoRedes;
 
@@ -48,6 +44,9 @@ public class CadastroUsuario extends Page {
 
 		acessoRedes = new RadioBox();
 		acessoRedes.set("reag_all0");
+
+		dataNascimento = new Text();
+		dataNascimento.set("us_data_nasc");
 	}
 
     public SelectBox getFuncao(){
@@ -75,5 +74,7 @@ public class CadastroUsuario extends Page {
 	public RadioBox getAcessoRedes(){
 		return acessoRedes;
 	}
+	public Text getDatanascimento(){return dataNascimento;}
+
 }
 

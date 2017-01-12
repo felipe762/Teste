@@ -38,32 +38,28 @@ public class VendasDistribucaoTest extends Page {
             getFinder().buscaPeloId("inserir-registroMenuModulo22").click();
 
             vendas.getEstado().selecionaPeloTexto("MG");
-            getFinder().buscaPeloId("ui-id-6").click();
+            vendas.getPdv().buscar("MERCEARIA MARGARIDA");
+            getFinder().buscaPeloId("ui-id-6").click();//
             getFinder().buscaPeloId("ufVenda").click();
-            getFinder().buscaPeloId("ufVenda").click();
+            sleep(1000);
 
-            vendas.getVendedor().buscar("    ");
-            getFinder().buscaPeloId("ui-id-10").click();
-            //vendas.salvar();//não apagar
-            //*[@id="botoesPDR"]/input[1]
+            vendas.getVendedor().buscar("GUILHERME VITOR");
+            getFinder().buscaPeloId("ui-id-9").click();
+            vendas.salvar();//não apagar
+
             driver.findElement(By.xpath("//*[@id=\"botoesPDR\"]/input[1]")).click();
-            getFinder().buscaPeloId("botoesPDR").click();
-            //vendasPap.salvar();
+            sleep(800);
             vendas.getPlano().selecionaPeloTexto("CONTROLE FATURA 1,5GB - R$49.99");
             vendas.getIccid().digita("89558278372873279382");
             getFinder().buscaPeloId("vese_fatura_vencimento11").click();
 
-            //Mudar de aba
-            vendas.salvar();//não deletar
-            getFinder().buscaPeloId("id-usuario-cpf").click();
+            //Mudar de aba: Tem que resolver o problema e verificar porque não funciona nem buscando pelo id no porem utilizar o salvar
+            vendas.salvar();
 
-            //Dados do cliente
-            //getFinder().buscaPeloNomeDaClasse("fa-chevron-circle-right").click();
+            //Dados do Cliente
             GeraCPF g = new GeraCPF();
-
-            //sleep(5000);
-
             vendas.getCpf().digita(g.geraCPFFinal());
+            sleep(100);
             /*//vendas.salvar();
             Assert.assertTrue(vendas.getCpf().verificaTextoNosAtributosDoCampo("Informe o CPF;"));*/
             vendas.getNome().digita("Jose");
